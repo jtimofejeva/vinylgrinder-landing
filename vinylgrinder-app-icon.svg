@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <style>
+    .record-spin {
+      transform-origin: 80px 80px;
+      animation: spinRecord 12s linear infinite;
+    }
+    .crosshair-lines {
+      animation: crosshairPulse 2.4s ease-in-out infinite;
+    }
+    .crosshair-brackets {
+      animation: crosshairPulse 2.4s ease-in-out 0.3s infinite;
+    }
+    @keyframes spinRecord {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes crosshairPulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+  </style>
+
+  <!-- Rounded square background -->
+  <rect width="160" height="160" rx="36" fill="#0a0a0a"/>
+
+  <!-- Spinning record -->
+  <g class="record-spin">
+    <circle cx="80" cy="80" r="68" stroke="#f0f0f0" stroke-width="2.5" fill="none"/>
+    <circle cx="80" cy="80" r="59" stroke="#f0f0f0" stroke-width="0.6" stroke-opacity="0.22" fill="none"/>
+    <circle cx="80" cy="80" r="51" stroke="#f0f0f0" stroke-width="0.6" stroke-opacity="0.22" fill="none"/>
+    <circle cx="80" cy="80" r="43" stroke="#f0f0f0" stroke-width="0.6" stroke-opacity="0.22" fill="none"/>
+    <circle cx="80" cy="80" r="35" stroke="#f0f0f0" stroke-width="0.6" stroke-opacity="0.22" fill="none"/>
+    <circle cx="80" cy="80" r="24" fill="#1a1a1a" stroke="#f0f0f0" stroke-width="1.2"/>
+    <circle cx="80" cy="80" r="4.5" fill="#f0f0f0"/>
+  </g>
+
+  <!-- Crosshair lines -->
+  <g class="crosshair-lines">
+    <line x1="80" y1="8"   x2="80" y2="56"  stroke="#cc0000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="80" y1="104" x2="80" y2="152" stroke="#cc0000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="8"  y1="80"  x2="56" y2="80"  stroke="#cc0000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="104" y1="80" x2="152" y2="80" stroke="#cc0000" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Corner brackets -->
+  <g class="crosshair-brackets" stroke="#cc0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M56 56 L56 66 L66 66"/>
+    <path d="M104 56 L104 66 L94 66"/>
+    <path d="M56 104 L56 94 L66 94"/>
+    <path d="M104 104 L104 94 L94 94"/>
+  </g>
+</svg>
