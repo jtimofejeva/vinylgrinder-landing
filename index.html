@@ -3,20 +3,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VinylGrinder — Catalogue your vinyl collection. Snap, scan, sell.</title>
-<meta name="description" content="The fastest way to catalogue your vinyl collection — and list it for sale. Photo recognition, Discogs Marketplace, eBay and Shopify in one tap. eBay coming next.">
+<meta name="description" content="The fastest way to catalogue your vinyl collection — and list it for sale. Photo recognition, then clean SEO-optimised listings to Discogs Marketplace and Shopify in one tap. eBay coming next.">
 <link rel="canonical" href="https://app.vinylgrinder.com/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 fill=%22%230a0a0a%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2212%22 fill=%22none%22 stroke=%22%23f2f0ec%22 stroke-width=%221.5%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%224%22 fill=%22%23cc0000%22/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://app.vinylgrinder.com/">
 <meta property="og:title" content="VinylGrinder — Stop typing. Start grinding.">
-<meta property="og:description" content="Snap a sleeve, sell a record. Photo recognition, Discogs Marketplace, eBay and Shopify in one tap. For dealers and collectors who actually move vinyl.">
+<meta property="og:description" content="Snap a sleeve, sell a record. Built for Discogs sellers, Shopify shops and record dealers — and the collectors who actually move vinyl. Clean listings to Discogs Marketplace and Shopify in one tap. eBay coming next.">
 <meta property="og:site_name" content="VinylGrinder">
 <meta property="og:image" content="https://app.vinylgrinder.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VinylGrinder — Stop typing. Start grinding.">
-<meta name="twitter:description" content="Snap a sleeve, sell a record. Photo recognition, Discogs Marketplace, eBay and Shopify in one tap. For dealers and collectors who actually move vinyl.">
+<meta name="twitter:description" content="Snap a sleeve, sell a record. Built for Discogs sellers, Shopify shops and record dealers — and the collectors who actually move vinyl. Clean listings to Discogs Marketplace and Shopify in one tap. eBay coming next.">
 <meta name="twitter:image" content="https://app.vinylgrinder.com/og-image.png">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -320,6 +320,23 @@ nav.nav {
 .btn-ghost:hover { border-color: var(--ink); background: rgba(255,255,255,0.04); }
 .btn .arr { font-size: 14px; }
 
+.hero-fineprint {
+  margin-top: 18px;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-dimmer);
+  max-width: 480px;
+}
+.hero-trust {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  max-width: 480px;
+}
+
 .hero-meta {
   margin-top: 40px;
   display: flex; gap: 40px; flex-wrap: wrap;
@@ -443,7 +460,7 @@ nav.nav {
 
 .how-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 60px;
 }
@@ -627,6 +644,26 @@ nav.nav {
 }
 @keyframes publishPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(204,0,0,0.5); } 50% { box-shadow: 0 0 0 6px rgba(204,0,0,0); } }
 
+.m4 { padding: 20px 18px; display: flex; flex-direction: column; gap: 8px; }
+.m4-field {
+  display: grid; grid-template-columns: 78px 1fr; align-items: baseline; gap: 12px;
+  padding: 10px 12px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+}
+.m4-field-notes { align-items: start; }
+.m4-k { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); }
+.m4-v { font-family: var(--sans); font-size: 13px; color: var(--ink); line-height: 1.4; }
+.m4-v b { color: var(--accent); font-weight: 600; }
+.m4-price { font-family: var(--display); font-size: 18px; letter-spacing: -0.01em; }
+.m4-save {
+  margin-top: auto;
+  background: rgba(204,0,0,0.08); color: var(--accent);
+  border: 1px solid var(--accent);
+  font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 14px; text-align: center;
+}
+
 /* =========================================================
    FEATURE DEEP-DIVE
    ========================================================= */
@@ -714,6 +751,17 @@ nav.nav {
   font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim);
 }
 .feat-pub-channels .c b { display: block; color: var(--ink); font-family: var(--sans); font-size: 16px; letter-spacing: -0.01em; margin-bottom: 4px; text-transform: none; font-weight: 700; }
+
+.feat-ways { grid-column: 1 / -1; }
+.ways-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  margin-top: 28px;
+}
+.way { display: flex; flex-direction: column; gap: 8px; padding-top: 22px; border-top: 1px solid var(--line); }
+.way-ico { width: 26px; height: 26px; color: var(--accent); margin-bottom: 2px; }
+.way-ico svg { width: 100%; height: 100%; display: block; }
+.way b { font-family: var(--sans); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); text-transform: none; }
+.way span { font-family: var(--sans); font-size: 14px; line-height: 1.5; color: var(--ink-dim); }
 
 /* =========================================================
    FEAT-INVENTORY — collection + marketplace status card
@@ -1011,7 +1059,7 @@ nav.nav {
 }
 
 /* =========================================================
-   CTA BLOCK — popup-style waitlist button
+   CTA BLOCK — beta signup button
    ========================================================= */
 .cta-block {
   margin: 48px auto 0;
@@ -1214,6 +1262,9 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
   .how-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .feat-hero { min-height: auto; }
+  .ways-grid { grid-template-columns: 1fr; gap: 0; }
+  .way { padding-top: 18px; margin-top: 18px; }
+  .way:first-child { margin-top: 0; }
   .tiers { grid-template-columns: 1fr; }
   .tier { border-right: none; border-bottom: 1px solid var(--line); }
   .plans { grid-template-columns: 1fr; }
@@ -1250,7 +1301,7 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
       <a href="#who">Who it's for</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a href="https://tally.so/r/NpBZYN" target="_blank" rel="noopener" class="nav-cta">Join waitlist</a>
+    <a href="https://tally.so/r/NpBZYN" target="_blank" rel="noopener" class="nav-cta">Join the private beta</a>
   </div>
 </nav>
 
@@ -1269,12 +1320,14 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
       </h1>
       <p class="hero-sub">
         The fastest way to catalogue your vinyl — and list it for sale.
-        <strong>Snap the sleeve.</strong> We match it against Discogs and push an SEO-optimised listing to Discogs Marketplace and Shopify in one tap.
+        <strong>Snap the sleeve,</strong> we surface the likely Discogs releases, you confirm the right pressing, then push a clean, SEO-optimised listing to Discogs Marketplace and Shopify in one tap.
       </p>
       <div class="hero-ctas">
-        <a href="https://tally.so/r/NpBZYN" target="_blank" rel="noopener" class="btn btn-primary">Get early access <span class="arr">→</span></a>
+        <a href="https://tally.so/r/NpBZYN" target="_blank" rel="noopener" class="btn btn-primary">Join the private beta <span class="arr">→</span></a>
         <a href="#how" class="btn btn-ghost">See it work</a>
       </div>
+      <p class="hero-fineprint">No payment required. Early users help shape the listing workflow for Discogs, Shopify and marketplace sellers.</p>
+      <p class="hero-trust">Built by a working vinyl seller running a 3,500-record store.</p>
       <div class="hero-meta">
         <div><strong>~6s</strong>avg scan → listing</div>
         <div><strong>2</strong>channels, one click</div>
@@ -1339,9 +1392,9 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
     <div class="section-head">
       <div>
         <div class="eyebrow"><span class="hash">#</span>02 — Workflow</div>
-        <h2 style="margin-top: 12px;">Three steps.<br>Shelf <em>to storefront.</em></h2>
+        <h2 style="margin-top: 12px;">Four steps.<br>Shelf <em>to storefront.</em></h2>
       </div>
-      <p style="color: var(--ink-dim); font-size: 16px; max-width: 400px;">Photo recognition does the heavy lifting. Discogs fills in the blanks. Publishing is one tap on each channel.</p>
+      <p style="color: var(--ink-dim); font-size: 16px; max-width: 400px;">Photo recognition does the heavy lifting and surfaces the likely Discogs releases. You confirm the right pressing, add your details, then publish in one tap on each channel.</p>
     </div>
 
     <div class="how-grid">
@@ -1373,7 +1426,7 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
       <div class="step-card">
         <div class="step-card-head">
           <span class="n">STEP 02</span>
-          <span class="k">Discogs · Match</span>
+          <span class="k">Discogs · Confirm</span>
         </div>
         <div class="step-mock m2">
           <div class="m2-header"><span>Candidates <b>· 4</b></span><span>Confidence</span></div>
@@ -1399,8 +1452,8 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
           </div>
         </div>
         <div class="step-body">
-          <h3>Enrich from Discogs.</h3>
-          <p>We match the photo to the exact pressing. Tracklist, catalog number, year, country, label — pulled in, verified, ready.</p>
+          <h3>Review &amp; confirm the pressing.</h3>
+          <p>We surface the likely Discogs releases ranked by confidence — you pick the right pressing. Tracklist, catalog number, year, country and label come through ready to use.</p>
         </div>
       </div>
 
@@ -1408,6 +1461,33 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
       <div class="step-card">
         <div class="step-card-head">
           <span class="n">STEP 03</span>
+          <span class="k">Details · You</span>
+        </div>
+        <div class="step-mock m4">
+          <div class="m4-field">
+            <span class="m4-k">Condition</span>
+            <span class="m4-v"><b>VG+</b> media · <b>VG+</b> sleeve</span>
+          </div>
+          <div class="m4-field">
+            <span class="m4-k">Price</span>
+            <span class="m4-v m4-price">£42.00</span>
+          </div>
+          <div class="m4-field m4-field-notes">
+            <span class="m4-k">Notes</span>
+            <span class="m4-v">First UK press · light shelf wear · plays clean throughout.</span>
+          </div>
+          <div class="m4-save">Details saved ✓</div>
+        </div>
+        <div class="step-body">
+          <h3>Add condition, price &amp; notes.</h3>
+          <p>Set media and sleeve grades, your asking price and any notes. Your call on every detail before a record goes live.</p>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step-card">
+        <div class="step-card-head">
+          <span class="n">STEP 04</span>
           <span class="k">Publish · live channels</span>
         </div>
         <div class="step-mock m3">
@@ -1432,8 +1512,8 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
           <div class="m3-publish">Publish to 2 channels →</div>
         </div>
         <div class="step-body">
-          <h3>Ship it.</h3>
-          <p>Platform-optimised titles and descriptions, generated and posted. One tap puts the record on Discogs Marketplace and Shopify at the same time. eBay arrives in the next phase.</p>
+          <h3>Push a clean listing.</h3>
+          <p>Platform-optimised titles and descriptions, generated and posted. One tap puts a clean listing on Discogs Marketplace and Shopify at the same time. eBay coming soon.</p>
         </div>
       </div>
     </div>
@@ -1486,6 +1566,30 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
           <div class="c"><b>One source</b>Of truth</div>
         </div>
       </div>
+
+      <!-- THREE WAYS IN -->
+      <div class="feat feat-ways">
+        <div class="feat-tag">Flexible input</div>
+        <h3>Three ways to add a record.</h3>
+        <p>However you work — fast on your feet or deep in catalog numbers — there's a path in.</p>
+        <div class="ways-grid">
+          <div class="way">
+            <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h3l1.5-2h9L18 8h3v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+            <b>From photo</b>
+            <span>Cover recognition surfaces the likely Discogs releases — you confirm the pressing.</span>
+          </div>
+          <div class="way">
+            <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+            <b>From Discogs</b>
+            <span>Search by catalog number, artist or title and pull the release straight in.</span>
+          </div>
+          <div class="way">
+            <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span>
+            <b>Manual entry</b>
+            <span>Prefer to do it by hand? Fill the form yourself, any time.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1496,33 +1600,33 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
     <div class="section-head">
       <div>
         <div class="eyebrow"><span class="hash">#</span>04 — Who it's for</div>
-        <h2 style="margin-top: 12px;">For crate-diggers<br><em>and crate-movers.</em></h2>
+        <h2 style="margin-top: 12px;">For crate-movers<br><em>and crate-diggers.</em></h2>
       </div>
     </div>
 
     <div class="tiers">
       <div class="tier">
-        <div class="tier-no">TIER 01 — Free</div>
-        <div class="tier-persona">The<br><em>Collector</em></div>
-        <div class="tier-size">50 — 300 records</div>
-        <p class="tier-desc">You've got a couple of crates. You want to know what you own. Maybe flip the odd duplicate. You care that your catalogue is correct — because you are.</p>
-        <div class="tier-quote">"I want to know exactly what's on my shelf, without spending a weekend typing it in."</div>
-      </div>
-
-      <div class="tier">
-        <div class="tier-no">TIER 02 — Pro</div>
+        <div class="tier-no">TIER 01 — Pro</div>
         <div class="tier-persona">The<br><em>Flipper</em></div>
         <div class="tier-size">500 — 3,000+ records</div>
-        <p class="tier-desc">You trade weekly. You've written the same description four hundred times. Listings are your job, not your hobby — and they're eating your evenings.</p>
+        <p class="tier-desc">You trade weekly on Discogs and your own Shopify shop. You've written the same description four hundred times. Listings are your job, not your hobby — and they're eating your evenings.</p>
         <div class="tier-quote">"If I could cut listing time in half, I could list twice as much. That's the whole game."</div>
       </div>
 
       <div class="tier">
-        <div class="tier-no">TIER 03 — Dealer</div>
+        <div class="tier-no">TIER 02 — Dealer</div>
         <div class="tier-persona">The<br><em>Store</em></div>
         <div class="tier-size">1,000s · multi-channel</div>
-        <p class="tier-desc">You run a store. Maybe a team. Inventory on Discogs, on Shopify, in the bricks-and-mortar — soon on eBay too. You need one source of truth and fast, consistent listings at scale.</p>
+        <p class="tier-desc">You run a record store. Maybe a team. Inventory on Discogs, on Shopify, in the bricks-and-mortar — soon on eBay too. You need one source of truth and fast, consistent listings at scale.</p>
         <div class="tier-quote">"I don't need another app. I need the listing queue to clear itself while I'm unpacking the next box."</div>
+      </div>
+
+      <div class="tier">
+        <div class="tier-no">TIER 03 — Free</div>
+        <div class="tier-persona">The<br><em>Collector</em></div>
+        <div class="tier-size">50 — 300 records</div>
+        <p class="tier-desc">You've got a couple of crates. You want to know what you own. Maybe flip the odd duplicate. You care that your catalogue is correct — because you are.</p>
+        <div class="tier-quote">"I want to know exactly what's on my shelf, without spending a weekend typing it in."</div>
       </div>
     </div>
   </div>
@@ -1551,12 +1655,20 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
           <p>For common releases with clear sleeve art, match confidence is typically 90%+. For rare, damaged or imported pressings, we surface the top candidates from Discogs and you confirm in a tap. It's faster than typing — even in edge cases.</p>
         </details>
         <details class="faq-item">
+          <summary>What happens after I join the beta? <span class="plus">+</span></summary>
+          <p>After you join, we'll ask what you sell, how many records you manage and which platforms you use. Selected beta users get early access and help shape the workflow.</p>
+        </details>
+        <details class="faq-item">
           <summary>Which channels do you publish to? <span class="plus">+</span></summary>
           <p>Discogs Marketplace and Shopify at launch, with channel-specific titles and descriptions. eBay is the priority for phase two. Reverb is being scoped with early Pro users.</p>
         </details>
         <details class="faq-item">
           <summary>Do I need a Discogs account? <span class="plus">+</span></summary>
           <p>No. We use Discogs as a data source — you don't need an account to benefit from enrichment. If you do have one, you can link it to sync your collection and wantlists.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do you use Discogs data? <span class="plus">+</span></summary>
+          <p>Connects with Discogs data where permitted to help you prepare structured listings faster. We use catalogue and release details — artist, title, label, catalog number, pressing — to pre-fill your listings. You add condition, price and photos.</p>
         </details>
         <details class="faq-item">
           <summary>Who owns the data? <span class="plus">+</span></summary>
@@ -1580,15 +1692,15 @@ footer .foot-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.
   <div class="wrap">
     <div class="eyebrow" style="color: var(--accent); display: block; margin-bottom: 24px;">#07 — Last call</div>
     <h2>Stop typing.<br><span class="accent">Start grinding.</span></h2>
-    <p>Join the waitlist. First wave of beta access goes out to early signups — Dealer-tier users first.</p>
+    <p>Join the private beta. First wave of access goes out to early signups — Dealer-tier users first.</p>
 
-    <!-- Waitlist CTA — opens the Tally form in a new tab (plain link, no JS handler). -->
+    <!-- Beta CTA — opens the Tally form in a new tab (plain link, no JS handler). -->
     <div class="cta-block">
       <a href="https://tally.so/r/NpBZYN"
          target="_blank"
          rel="noopener"
          class="cta-primary">
-        Join the waitlist <span class="cta-arr">→</span>
+        Join the private beta <span class="cta-arr">→</span>
       </a>
       <div class="cta-meta">
         <span class="cta-meta-item"><b>~30 sec</b>· 4 short questions</span>
