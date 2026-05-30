@@ -19,9 +19,36 @@
 <meta name="twitter:description" content="Snap a sleeve, sell a record. Built for Discogs sellers, Shopify shops and record dealers — and the collectors who actually move vinyl. Clean listings to Discogs Marketplace and Shopify in one tap. eBay coming next.">
 <meta name="twitter:image" content="https://app.vinylgrinder.com/og-image.png">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<!-- Preload the LCP hero image so it starts downloading immediately, in parallel. -->
+<link rel="preload" as="image" href="hero.webp" fetchpriority="high">
+<!-- Self-hosted fonts, preloaded so they're ready before first paint (no swap, no layout shift). -->
+<link rel="preload" as="font" type="font/woff2" href="fonts/archivo-black.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/archivo.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/jetbrains-mono.woff2" crossorigin>
+<style>
+/* Self-hosted fonts (latin). Archivo + JetBrains Mono are variable; Archivo Black is single-weight. */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/archivo.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/archivo-black.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono.woff2") format("woff2");
+}
+</style>
 
 <style>
 /* =========================================================
